@@ -22,7 +22,6 @@ class BookDataProvider implements CollectionDataProviderInterface, ItemDataProvi
     public function getCollection(string $resourceClass, string $operationName = null)
     {
         $book = (new Book())
-            ->setId(1)
             ->setTitle('boring life')
             ->setDescription('boring book')
             ->setAuthor((new Author())->setId(1)->setName("Mr. Boring"))
@@ -49,7 +48,8 @@ class BookDataProvider implements CollectionDataProviderInterface, ItemDataProvi
 
     public function supports(string $resourceClass, string $operationName = null, array $context = []): bool
     {
-        return $resourceClass === Book::class;
+        return false;
+        //return $resourceClass === Book::class;
         //return $resourceClass === Author::class; will return empty in api result because no dataprovider supports book
     }
 }

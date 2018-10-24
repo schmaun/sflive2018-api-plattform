@@ -5,21 +5,30 @@ namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiProperty;
 use ApiPlatform\Core\Annotation\ApiResource;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Class Author
  * @package App\Entity
  * @ApiResource()
+ * @ORM\Entity
  */
 class Author
 {
     /**
      * @ApiProperty(identifier=true)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Column(type="integer")
+     *
      * @var int
      */
     private $id;
 
     /**
+     * @ApiProperty(iri="http://schema.org/name")
+     * @ORM\Column()
+     *
      * @var string
      */
     private $name;
@@ -30,16 +39,6 @@ class Author
     public function getId(): int
     {
         return $this->id;
-    }
-
-    /**
-     * @param int $id
-     * @return Author
-     */
-    public function setId(int $id): Author
-    {
-        $this->id = $id;
-        return $this;
     }
 
     /**

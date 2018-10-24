@@ -6,6 +6,7 @@ namespace App\Entity;
 use ApiPlatform\Core\Annotation\ApiProperty;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Class Book
@@ -21,6 +22,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *     normalizationContext={"groups"={"Book:read"}},
  *     denormalizationContext={"groups"={"Book:write"}}
  * )
+ * @ORM\Entity
  */
 class Book
 {
@@ -28,6 +30,11 @@ class Book
     /**
      * @ApiProperty(identifier=true)
      * @Groups({"Book:read", "Book:write"})
+     *
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Column(type="integer")
+     *
      * @var int
      */
     private $id;
@@ -35,18 +42,24 @@ class Book
     /**
      * @ApiProperty(iri="http://schema.org/name")
      * @Groups({"Book:read", "Book:write"})
+     *
+     * @ORM\Column
+     *
      * @var string
      */
     private $title;
 
     /**
-     * @Groups({"Book:read"})
+     * @Groups({"Book:read", "Book:write"})
+     * @ORM\Column
      * @var string
      */
     private $description;
 
     /**
      * @Groups({"Book:read", "Book:write"})
+     * @ORM\OneToOne(targetEntity=Author::class)
+     *
      * @var Author
      */
     private $author;
@@ -57,16 +70,6 @@ class Book
     public function getId(): int
     {
         return $this->id;
-    }
-
-    /**
-     * @param int $id
-     * @return Book
-     */
-    public function setId(int $id): Book
-    {
-        $this->id = $id;
-        return $this;
     }
 
     /**
