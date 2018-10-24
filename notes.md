@@ -35,3 +35,8 @@ https://api-platform.com/docs/core/events
 not working :(
 
 cors
+
+some other topic rushed through, nobody knows
+
+file uploads: use symfony
+

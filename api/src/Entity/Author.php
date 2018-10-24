@@ -21,7 +21,8 @@ use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
  *     },
  *     attributes={
  *          "order"={"name": "DESC"}
- *     }
+ *     },
+ *     iri="http://schema.org/Person"
  * )
  * @ORM\Entity
  *

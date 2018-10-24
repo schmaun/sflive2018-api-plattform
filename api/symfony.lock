@@ -89,9 +89,6 @@
             "ref": "bb31a3bbec00a8fc8aa1c9fbf9b0ef9fc492f93d"
         }
     },
-    "friendsofsymfony/user-bundle": {
-        "version": "v2.1.2"
-    },
     "guzzlehttp/guzzle": {
         "version": "6.3.0"
     },
@@ -115,9 +112,6 @@
             "version": "1.5",
             "ref": "7b6cbc842f8cd3d550815247d12294f6f304a8c4"
         }
-    },
-    "paragonie/random_compat": {
-        "version": "v2.0.17"
     },
     "php-cs-fixer/diff": {
         "version": "v1.2.0"
@@ -197,9 +191,6 @@
             "ref": "cc1afd81841db36fbef982fe56b48ade6716fac4"
         }
     },
-    "symfony/form": {
-        "version": "v4.1.6"
-    },
     "symfony/framework-bundle": {
         "version": "3.3",
         "recipe": {
@@ -218,9 +209,6 @@
     "symfony/inflector": {
         "version": "v4.0.3"
     },
-    "symfony/intl": {
-        "version": "v4.1.6"
-    },
     "symfony/lts": {
         "version": "4-dev"
     },
@@ -229,9 +217,6 @@
     },
     "symfony/polyfill-ctype": {
         "version": "v1.8.0"
-    },
-    "symfony/polyfill-intl-icu": {
-        "version": "v1.9.0"
     },
     "symfony/polyfill-mbstring": {
         "version": "v1.6.0"
