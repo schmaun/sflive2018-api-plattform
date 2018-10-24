@@ -23,4 +23,5 @@ pagination
 configurable
 ```docker-compose exec php bin/console debug:config api_platform```
 
-
+security  
+access control  

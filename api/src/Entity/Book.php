@@ -17,13 +17,16 @@ use ApiPlatform\Core\Serializer\Filter\PropertyFilter;
  * @ApiResource(
  *     collectionOperations={
  *          "get",
- *          "post"
+ *          "post"={"accessControl"="is_granted('ROLE_ADMIN')"}
  *     },
  *     itemOperations={
  *          "get"
  *     },
  *     normalizationContext={"groups"={"Book:read"}},
- *     denormalizationContext={"groups"={"Book:write"}}
+ *     denormalizationContext={"groups"={"Book:write"}},
+ *     attributes={
+ *          "access_control"="is_granted('ROLE_USER')"
+ *     }
  * )
  * @ApiFilter(SearchFilter::class, properties={"title": "partial"})
  * @ApiFilter(PropertyFilter::class)

@@ -15,6 +15,10 @@ use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
  * Class Author
  * @package App\Entity
  * @ApiResource(
+ *     collectionOperations={
+ *          "get",
+ *          "post"={"access_control"="is_granted('ROLE_ADMIN')"}
+ *     },
  *     attributes={
  *          "order"={"name": "DESC"}
  *     }
