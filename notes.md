@@ -55,3 +55,5 @@ graphql
 extensions
 
 client generator
+
+https://les-tilleuls-coop.slides.com/masterclass/deck#/
