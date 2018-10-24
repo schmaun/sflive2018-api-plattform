@@ -11,8 +11,14 @@ serialization groups (normalizationContext, ...)
 
 https://localhost:8443/docs.jsonld
 
-### @apiFilter
-build in filters (only with doctrine)
+@apiFilter  
+build in filters (only with doctrine)  
 or create own service as filter
 
 change default order (only with doctrine)
+
+pagination  
+configurable
+```docker-compose exec php bin/console debug:config api_platform```
+
+
