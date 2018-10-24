@@ -30,3 +30,7 @@ user stuff skipped cause of trainer failure
 
 itemOperations (eg: change paths)
 
+subscriber
+https://api-platform.com/docs/core/events
+not working :(
+
