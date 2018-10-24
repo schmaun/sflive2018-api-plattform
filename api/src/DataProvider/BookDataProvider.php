@@ -23,8 +23,10 @@ class BookDataProvider implements CollectionDataProviderInterface, ItemDataProvi
     {
         $book = (new Book())
             ->setId(1)
-            ->setTitle('booring life')
-            ->setDescription('boring book');
+            ->setTitle('boring life')
+            ->setDescription('boring book')
+            ->setAuthor((new Author())->setId(1)->setName("Mr. Boring"))
+        ;
 
         return [$book];
         // or
