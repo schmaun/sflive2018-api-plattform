@@ -50,3 +50,8 @@ http cache
 
 custom operations (eg own controller)
 
+graphql
+
+extensions
+
+client generator
