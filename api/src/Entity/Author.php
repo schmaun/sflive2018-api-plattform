@@ -6,6 +6,7 @@ namespace App\Entity;
 use ApiPlatform\Core\Annotation\ApiProperty;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * Class Author
@@ -27,6 +28,7 @@ class Author
 
     /**
      * @ApiProperty(iri="http://schema.org/name")
+     * @Groups({"Book:read"})
      * @ORM\Column()
      *
      * @var string
