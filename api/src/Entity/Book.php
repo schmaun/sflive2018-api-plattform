@@ -19,9 +19,6 @@ use ApiPlatform\Core\Serializer\Filter\PropertyFilter;
  *          "get",
  *          "post"={"accessControl"="is_granted('ROLE_ADMIN')"}
  *     },
- *     itemOperations={
- *          "get"
- *     },
  *     normalizationContext={"groups"={"Book:read"}},
  *     denormalizationContext={"groups"={"Book:write"}},
  *     attributes={
@@ -66,6 +63,7 @@ class Book
     private $description;
 
     /**
+     * @ApiProperty(iri="http://schema.org/Author")
      * @Groups({"Book:read", "Book:write"})
      * @ORM\OneToOne(targetEntity=Author::class)
      *
@@ -76,7 +74,7 @@ class Book
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }

@@ -34,3 +34,4 @@ subscriber
 https://api-platform.com/docs/core/events
 not working :(
 
+cors
