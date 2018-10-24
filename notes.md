@@ -13,7 +13,9 @@ https://localhost:8443/docs.jsonld
 
 @apiFilter  
 build in filters (only with doctrine)  
-or create own service as filter
+or create own service as filter  
+property filter (filter the returned properties)  
+
 
 change default order (only with doctrine)
 

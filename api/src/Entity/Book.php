@@ -26,6 +26,7 @@ use ApiPlatform\Core\Serializer\Filter\PropertyFilter;
  *     denormalizationContext={"groups"={"Book:write"}}
  * )
  * @ApiFilter(SearchFilter::class, properties={"title": "partial"})
+ * @ApiFilter(PropertyFilter::class)
  * @ORM\Entity
  */
 class Book
