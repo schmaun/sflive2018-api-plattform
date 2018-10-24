@@ -26,7 +26,8 @@ use ApiPlatform\Core\Serializer\Filter\PropertyFilter;
  *     denormalizationContext={"groups"={"Book:write"}},
  *     attributes={
  *          "access_control"="is_granted('ROLE_USER')"
- *     }
+ *     },
+ *     itemOperations={"get"={"path"="/booooook"}}
  * )
  * @ApiFilter(SearchFilter::class, properties={"title": "partial"})
  * @ApiFilter(PropertyFilter::class)

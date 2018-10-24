@@ -25,3 +25,8 @@ configurable
 
 security  
 access control  
+
+user stuff skipped cause of trainer failure
+
+itemOperations (eg: change paths)
+
