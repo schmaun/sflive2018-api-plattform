@@ -4,9 +4,12 @@ declare(strict_types=1);
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiProperty;
+use ApiPlatform\Core\Annotation\ApiFilter;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Symfony\Component\Serializer\Annotation\Groups;
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
+use ApiPlatform\Core\Serializer\Filter\PropertyFilter;
 
 /**
  * Class Book
@@ -22,6 +25,7 @@ use Doctrine\ORM\Mapping as ORM;
  *     normalizationContext={"groups"={"Book:read"}},
  *     denormalizationContext={"groups"={"Book:write"}}
  * )
+ * @ApiFilter(SearchFilter::class, properties={"title": "partial"})
  * @ORM\Entity
  */
 class Book

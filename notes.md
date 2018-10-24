@@ -10,3 +10,7 @@ always define schema.org information (iri=)
 serialization groups (normalizationContext, ...)
 
 https://localhost:8443/docs.jsonld
+
+### @apiFilter
+build in filters
+or create own service as filter
