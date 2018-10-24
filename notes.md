@@ -1,8 +1,12 @@
 # Notes
 
+## things to search later
 schema.org + rdfa
 hydra rfc
+jsonld
 ------
+
+## workshop topics
 entity + dataprovider zum fetchen der daten (unabhängig vom persistence layer)
 
 always define schema.org information (iri=)
@@ -39,4 +43,10 @@ cors
 some other topic rushed through, nobody knows
 
 file uploads: use symfony
+
+behat tests
+
+http cache
+
+custom operations (eg own controller)
 
