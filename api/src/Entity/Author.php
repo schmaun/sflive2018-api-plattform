@@ -14,7 +14,11 @@ use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 /**
  * Class Author
  * @package App\Entity
- * @ApiResource()
+ * @ApiResource(
+ *     attributes={
+ *          "order"={"name": "DESC"}
+ *     }
+ * )
  * @ORM\Entity
  *
  * @ApiFilter(SearchFilter::class, properties={"name": "partial"})
